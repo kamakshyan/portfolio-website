@@ -17,6 +17,7 @@ module.exports = {
 		fontFamily: {
 			'montreux': 'Montreux C',
 			'scp': 'Source Code Pro',
+			'po': 'Portico Outline',
 		}
 	},
 	plugins: [],
