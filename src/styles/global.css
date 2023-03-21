@@ -1,0 +1,34 @@
+body{
+    cursor: none;
+    overflow-x: hidden;
+}
+.cursor{
+    z-index: 999;
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 75ms;
+    transition-timing-function: ease-out;
+    cursor: auto;
+    /* pointer-events: none; */
+    /* mix-blend-mode: difference; */
+}
+.cursor-inner{
+    z-index: 999;
+    width: 10px;
+    height: 10px;
+    border: 6px solid white;
+    border-radius: 50%;
+    position: absolute;
+}
+
+@keyframes cursorAnim{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(0.7);
+    }
+}
