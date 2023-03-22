@@ -15,7 +15,6 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<link href="https://db.onlinewebfonts.com/c/2ce69e4c9965538c428a9c764de2db0c?family=Montreux+C" rel="stylesheet" type="text/css"/>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
@@ -26,6 +25,16 @@ const { title } = Astro.props;
 		<div class="cursor hidden sm:block drop-shadow-lg"></div>
 		<div class="cursor-inner hidden sm:block drop-shadow-lg"></div>
 		<slot />
+		<style is:global>
+			@font-face {
+				font-family: 'PorticoOutline';
+				src: url('/fonts/portico-outline.otf') format('opentype');
+			}
+			@font-face{
+				font-family: 'Montreux C';
+				src: url('/fonts/Montreux.ttf') format('truetype');
+			}
+		</style>
 		<script>
 			
 			const cursor = document.querySelector('.cursor');

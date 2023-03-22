@@ -1,11 +1,9 @@
-@font-face {
-    font-family: 'Portico Outline';
-    src: url('/public/fonts/portico-outline.otf') format('otf');
-}
+
 
 body{
     cursor: none;
     overflow-x: hidden;
+    
 }
 .cursor{
     z-index: 999;
