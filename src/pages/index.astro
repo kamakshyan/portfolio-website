@@ -4,18 +4,27 @@ import Icon from 'astro-icon';
 ---
 
 <Layout title="Welcome to Astro.">
-	<main class="mt-6">
-		<section class="bg-[#222831] text-[#FFD369] px-5 py-10">
-			<h1 class="font-montreux text-5xl">I'm Kamakshya Nanda👨🏽‍💻</h1>
+	<main class="flex flex-col gap-7 mt-12 px-5 py-10 md:px-80">
+		<section class="bg-[#222831] text-[#FFD369]">
+			<h1 class="font-po text-5xl ml-1 mb-2">Hey, I'm</h1>
+			<h1 class="font-montreux tracking-wide uppercase text-5xl">Kamakshya Nanda👨🏽‍💻</h1>
 		</section>
-		<section class="flex flex-col gap-4 font-scp px-5 py-10 text-[#EEEEEE]">
+		<section class="flex flex-col gap-4 font-scp text-[#EEEEEE]">
 			<p class="text-xl">
 				A Fullstack Developer, UI Designer, Data Analyst & Music Producer
 			</p>
 			<p class="flex gap-4 items-center text-xl">
 				See More About Me <Icon class="w-6 animate-bounce-right" name="ic:outline-keyboard-arrow-right"/>
 			</p>
+			<div class="flex items-center gap-3">
+				<Icon class="w-7 text-[#EEEEEE]" name='mdi:github' />
+				<Icon class="w-7 text-[#EEEEEE]" name='ri:linkedin-box-fill' />
+				<Icon class="w-7 text-[#EEEEEE]" name='mdi:instagram' />
+				<Icon class="w-7 text-[#EEEEEE]" name='ion:logo-twitter' />
+				<Icon class="w-7 text-[#EEEEEE]" name='mdi:soundcloud' />
+			</div>
+	
 		</section>
-
+		
 	</main>
 </Layout>

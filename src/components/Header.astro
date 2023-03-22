@@ -2,7 +2,13 @@
 import Icon from 'astro-icon';
 ---
 
-<div class="flex items-center justify-between px-5 py-10">
-    <h1 class="font-montreux text-3xl italic text-gray-200">KN</h1>
-    <Icon class="text-gray-300 w-9" name="ph:hamburger-thin"/>
+<div class="flex items-center justify-between p-10 md:px-64">
+    <h1 class="font-po text-3xl tracking-widest text-gray-200">K.</h1>
+    <Icon class="text-gray-300 w-9 md:hidden" name="ph:hamburger-thin"/>
+    <div class="hidden md:flex gap-10  text-[#cecece]">
+        <a href="">About</a>
+        <a href="">Projects</a>
+        <a href="">Resume</a>
+        <a href="">Contact</a>
+    </div>
 </div>

@@ -14,15 +14,17 @@ body{
     position: absolute;
     transition-duration: 75ms;
     transition-timing-function: ease-out;
-    cursor: auto;
+    pointer-events: none;
 }
 .cursor-inner{
     z-index: 999;
-    width: 10px;
-    height: 10px;
-    border: 6px solid white;
+    width: 5px;
+    height: 5px;
+    border: 3px solid white;
     border-radius: 50%;
     position: absolute;
+    transition-timing-function: ease-out;
+    pointer-events: none;
 }
 
 @keyframes cursorAnim{
