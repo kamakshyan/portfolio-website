@@ -1,4 +1,14 @@
+:root{
+    --highlight-color:null;
+}
 
+::selection {
+    /* color: aliceblue;
+    background: #1c1d1d;
+    filter: drop-shadow(0 0.2rem 0.25rem rgba(0, 0, 0, 0.2)); */
+    color: aliceblue;
+    background: var(--highlight-color);
+}
 
 body{
     cursor: none;
@@ -8,6 +18,16 @@ body{
 a{
     all: unset;
 }
+a:after{
+    display:block;
+    content: '';
+    border-bottom: solid 3px #019fb6;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+}
+a.fromLeft:after{  transform-origin:  0% 50%; }
+a.fromRight:hover:after{ transform: scaleX(1); transform-origin: 100% 50%; }
+
 .cursor{
     z-index: 999;
     width: 30px;
@@ -15,7 +35,7 @@ a{
     border: 1px solid white;
     border-radius: 50%;
     position: absolute;
-    transition-duration: 75ms;
+    transition-duration: 100ms;
     transition-timing-function: ease-out;
     pointer-events: none;
 }
@@ -32,7 +52,11 @@ a{
 .link-grow{
     z-index: 999;
     transform:scale(1.5);
+    background: white;
+    mix-blend-mode: difference;
+    border: none;
 }
+
 .hide{
     display: none;
 }
