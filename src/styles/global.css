@@ -18,15 +18,23 @@ body{
 a{
     all: unset;
 }
-a:after{
-    display:block;
-    content: '';
-    border-bottom: solid 3px #019fb6;  
-    transform: scaleX(0);  
-    transition: transform 250ms ease-in-out;
+
+.link-borderb{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
 }
-a.fromLeft:after{  transform-origin:  0% 50%; }
-a.fromRight:hover:after{ transform: scaleX(1); transform-origin: 100% 50%; }
+.link-borderb::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: width .3s;
+}
+.link-borderb:hover::after {
+    width: 100%;
+}
 
 .cursor{
     z-index: 999;

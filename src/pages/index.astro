@@ -4,7 +4,7 @@ import Icon from 'astro-icon';
 ---
 
 <Layout title="Welcome to Astro.">
-	<main class="flex flex-col gap-12 mt-12 px-5 py-10 md:px-80">
+	<main class="flex flex-col gap-14 mt-12 px-5 py-10 md:px-80">
 		<section class=" text-[#FFD369]">
 			<h1 class="font-po text-5xl ml-1 mb-2">Hey, I'm</h1>
 			<h1 class="font-montreux tracking-wide uppercase text-5xl">Kamakshya Nanda👨🏽</h1>
@@ -22,13 +22,15 @@ import Icon from 'astro-icon';
 				<Icon class="w-7 text-[#EEEEEE]" name='logos:tailwindcss-icon' />
 				
 			</p>
-			<p class="text-xl">
-				<a class="flex fromLeft w-max gap-3 items-center" href="">See More About Me <Icon class="w-6 animate-bounce-right" name="ic:outline-keyboard-arrow-right"/></a>
-			</p>
-			<div class="flex items-center gap-3">
-				<a href="https://github.com/kamakshyan"><Icon class="w-7 text-[#EEEEEE]" name='mdi:github' /></a>
-				<a href="https://www.linkedin.com/in/kamakshya-nanda/"><Icon class="w-7 text-[#EEEEEE]" name='ri:linkedin-box-fill' /></a>
-				<a href="https://open.spotify.com/user/lj99f56sm1s4h55co17qiv193"><Icon class="w-7 text-[#EEEEEE]" name='mdi:spotify' /></a>
+			<div class="flex flex-col gap-2">
+				<p class="text-xl flex gap-3">
+					<a class="fromLeft w-max items-center link-borderb" href="">See More About Me </a><Icon class="w-6 animate-bounce-right" name="ic:outline-keyboard-arrow-right"/>
+				</p>
+				<div class="flex items-center gap-3">
+					<a href="https://github.com/kamakshyan"><Icon class="w-7 text-[#EEEEEE]" name='mdi:github' /></a>
+					<a href="https://www.linkedin.com/in/kamakshya-nanda/"><Icon class="w-7 text-[#EEEEEE]" name='ri:linkedin-box-fill' /></a>
+					<a href="https://open.spotify.com/user/lj99f56sm1s4h55co17qiv193"><Icon class="w-7 text-[#EEEEEE]" name='mdi:spotify' /></a>
+				</div>
 			</div>
 		</section>
 		
