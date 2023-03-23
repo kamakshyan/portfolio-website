@@ -5,11 +5,14 @@ body{
     overflow-x: hidden;
     
 }
+a{
+    all: unset;
+}
 .cursor{
     z-index: 999;
-    width: 40px;
-    height: 40px;
-    border: 2px solid white;
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
     border-radius: 50%;
     position: absolute;
     transition-duration: 75ms;
@@ -18,13 +21,48 @@ body{
 }
 .cursor-inner{
     z-index: 999;
-    width: 5px;
-    height: 5px;
-    border: 3px solid white;
+    width: 4px;
+    height: 4px;
+    border: 2px solid rgb(192, 191, 191);
     border-radius: 50%;
     position: absolute;
     transition-timing-function: ease-out;
     pointer-events: none;
+}
+.link-grow{
+    z-index: 999;
+    transform:scale(1.5);
+}
+.hide{
+    display: none;
+}
+.noisy {
+    position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200vh;
+  background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+  background-repeat: repeat;
+  animation: bg-animation .2s infinite;
+  opacity: .9;
+  visibility: visible; 
+}
+
+@keyframes bg-animation {
+    0% { transform: translate(0,0) }
+    10% { transform: translate(-5%,-5%) }
+    20% { transform: translate(-10%,5%) }
+    30% { transform: translate(5%,-10%) }
+    40% { transform: translate(-5%,15%) }
+    50% { transform: translate(-10%,5%) }
+    60% { transform: translate(15%,0) }
+    70% { transform: translate(0,10%) }
+    80% { transform: translate(-15%,0) }
+    90% { transform: translate(10%,5%) }
+    100% { transform: translate(5%,0) }
 }
 
 @keyframes cursorAnim{
