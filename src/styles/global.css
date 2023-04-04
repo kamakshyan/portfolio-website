@@ -3,9 +3,6 @@
 }
 
 ::selection {
-    /* color: aliceblue;
-    background: #1c1d1d;
-    filter: drop-shadow(0 0.2rem 0.25rem rgba(0, 0, 0, 0.2)); */
     color: aliceblue;
     background: var(--highlight-color);
 }
@@ -13,6 +10,7 @@
 body{
     cursor: none;
     overflow-x: hidden;
+    scroll-behavior: smooth;
     
 }
 a{
@@ -38,28 +36,25 @@ a{
 
 .cursor{
     z-index: 999;
-    width: 30px;
-    height: 30px;
-    border: 1px solid white;
+    width: 40px;
+    height: 40px;
+    border: 3px solid white;
     border-radius: 50%;
     position: absolute;
-    transition-duration: 100ms;
-    transition-timing-function: ease-out;
     pointer-events: none;
 }
 .cursor-inner{
     z-index: 999;
-    width: 4px;
-    height: 4px;
-    border: 2px solid rgb(192, 191, 191);
+    width: 8px;
+    height: 8px;
+    background-color: whitesmoke;
     border-radius: 50%;
     position: absolute;
-    transition-timing-function: ease-out;
     pointer-events: none;
 }
 .link-grow{
     z-index: 999;
-    transform:scale(2);
+    transform:scale(2) !important;
     background: white;
     mix-blend-mode: difference;
     border: none;

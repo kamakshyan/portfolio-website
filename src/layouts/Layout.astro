@@ -2,11 +2,13 @@
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import '../styles/global.css'
+
 export interface Props {
 	title: string;
 }
 
 const { title } = Astro.props;
+
 ---
 
 <!DOCTYPE html>
@@ -22,6 +24,7 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body class="bg-[#16181f]">
+		
 		<div class="noisy -z-50"></div>
 		<Header/>
 		<div class="cursor hidden sm:block drop-shadow-lg"></div>
@@ -39,28 +42,20 @@ const { title } = Astro.props;
 			}
 		</style>
 		<script>
+			import gsap from 'gsap';
 			
-			const cursor = document.querySelector('.cursor');
-			const cursorInner = document.querySelector('.cursor-inner');
-			const navLinks = document.querySelectorAll('a')
+			// const cursor = document.querySelector('.cursor');
+			// const cursorInner = document.querySelector('.cursor-inner');
+			
 
+
+			// document.addEventListener('mousemove', e =>{
+			// 	cursor.setAttribute("style","top: "+(e.pageY - 10)+"px; left:"+(e.pageX - 10)+"px; ");
+			// 	cursorInner.setAttribute("style","top: "+(e.pageY +3)+"px; left:"+(e.pageX + 3)+"px; ")
+			// });
+
+			
 			const colors = ["#E94560", "#533483", "#0F3460", "#16213E", "#17BAB9"];
-
-			document.addEventListener('mousemove', e =>{
-				cursor.setAttribute("style","top: "+(e.pageY - 10)+"px; left:"+(e.pageX - 10)+"px; ");
-				cursorInner.setAttribute("style","top: "+(e.pageY +3)+"px; left:"+(e.pageX + 3)+"px; ")
-			});
-
-			navLinks.forEach(link => {
-				link.addEventListener('mouseover', () => {
-					cursor.classList.add('link-grow');
-					cursorInner.classList.add('hide');
-				});
-				link.addEventListener('mouseleave', () => {
-					cursor.classList.remove('link-grow');
-					cursorInner.classList.remove('hide');
-				});
-			});
 
 			window.addEventListener("mousedown", (e) => {
 				const color = colors.shift();
@@ -68,10 +63,58 @@ const { title } = Astro.props;
 				colors.push(color);
 			});
 
-			// Theme Switcher
+			const cursor = document.querySelector('.cursor');
+			const cursorInner = document.querySelector('.cursor-inner');
 
-			
 
+			const updateCursor = (e) => {
+
+				gsap.to('.cursor',{
+					
+					duration: 1,
+					x: e.pageX - 21,
+					y: e.pageY - 121  ,
+					ease: 'power3.out',
+				});
+				
+
+				//cursor.setAttribute("style","top: "+(e.pageY)+"px; left:"+(e.pageX)+"px; ");
+				cursorInner.setAttribute("style","top: "+(e.pageY + 10)+"px; left:"+(e.pageX - 5)+"px; ");
+
+			}
+
+			window.addEventListener('mousemove',updateCursor);
+
+			const navLinks = document.querySelectorAll('a');
+
+			navLinks.forEach(link => {
+				// link.addEventListener('mouseover', () => {
+				// 	gsap.to('.cursor',{
+				// 		className: "cursor link-grow",
+				// 		ease: 'power3.out',
+				// 	});
+					
+				// 	gsap.to('.cursor-inner',{
+				// 		className: "cursor-inner hide",
+				// 		ease: 'power3.out',
+				// 	});
+				// 	// cursor.classList.add('link-grow');
+				// 	// cursorInner.classList.add('hide');
+				// });
+
+
+				// link.addEventListener('mouseleave', () => {
+				// 	gsap.to('.cursor',{
+				// 		className: "cursor",
+				// 	});
+				// 	gsap.to('.cursor-inner',{
+				// 		className: "cursor-inner",
+				// 	});
+				// 	// cursor.classList.remove('link-grow');
+				// 	// cursorInner.classList.remove('hide');
+				// });
+			});
 		</script>
+		
 	</body>
 </html>
